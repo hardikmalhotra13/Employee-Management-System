@@ -1,0 +1,28 @@
+.employee-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.employee-filters__select {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.employee-filters__select:hover {
+  border-color: #B9C2CE;
+}
+
+.employee-filters__select:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}

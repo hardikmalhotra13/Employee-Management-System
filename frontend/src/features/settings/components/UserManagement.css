@@ -1,0 +1,241 @@
+.user-management {
+  background: #FFFFFF;
+  border: 1px solid #DCE1E8;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.05),
+    0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+.user-management__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.user-management__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-management__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #EFF6FF;
+  color: #2563EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.user-management__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.user-management__subtitle {
+  font-size: 12.5px;
+  color: #6B7280;
+  margin: 2px 0 0;
+}
+
+.user-management__add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:
+    0 1px 2px rgba(37, 99, 235, 0.08),
+    0 2px 8px rgba(37, 99, 235, 0.16);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.user-management__add-button:hover {
+  background: #1D4ED8;
+  box-shadow:
+    0 1px 2px rgba(37, 99, 235, 0.1),
+    0 4px 12px rgba(37, 99, 235, 0.22);
+}
+
+.user-management__table-card {
+  background: #FFFFFF;
+  border: 1px solid #DCE1E8;
+  border-radius: 14px;
+}
+
+.user-management__name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-management__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #EFF6FF;
+  color: #2563EB;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.user-management__menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-management__menu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #DCE1E8;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #6B7280;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.user-management__menu-trigger:hover {
+  background: #F9FAFB;
+  border-color: #B9C2CE;
+  color: #111827;
+}
+
+.user-management__menu-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  min-width: 160px;
+  background: #FFFFFF;
+  border: 1px solid #DCE1E8;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, 0.12);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-management__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.user-management__menu-item:hover {
+  background: #F3F4F6;
+}
+
+.user-management__menu-item--danger {
+  color: #DC2626;
+}
+
+.user-management__menu-item--danger:hover {
+  background: #FEF2F2;
+}
+
+.user-management__error {
+  font-size: 13px;
+  color: #DC2626;
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.user-management__notice {
+  font-size: 12.5px;
+  color: #B45309;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin: 0 0 16px;
+}
+
+.user-management__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.user-management__cancel {
+  padding: 9px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.user-management__cancel:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.user-management__submit {
+  padding: 9px 16px;
+  background: #2563EB;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.user-management__submit:hover {
+  background: #1D4ED8;
+}
+
+@media (max-width: 640px) {
+  .user-management__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-management__add-button {
+    justify-content: center;
+  }
+}

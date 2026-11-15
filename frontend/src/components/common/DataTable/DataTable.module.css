@@ -1,0 +1,43 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  text-align: left;
+  color: #9CA3AF;
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: 22px;
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 22px;
+}
+
+.table td {
+  padding: 14px 16px;
+  color: #374151;
+  border-top: 1px solid #F3F4F6;
+}
+
+.table tbody tr:hover td {
+  background: #F9FAFB;
+}
+
+.state {
+  padding: 48px 0;
+  text-align: center;
+  color: #9CA3AF;
+  font-size: 13px;
+}

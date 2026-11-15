@@ -1,0 +1,349 @@
+.employee-offboarding {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.employee-offboarding__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.employee-offboarding__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-offboarding__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.employee-offboarding__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.employee-offboarding__subtitle {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  margin: 2px 0 0;
+}
+
+.employee-offboarding__start-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.employee-offboarding__start-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.employee-offboarding__loading,
+.employee-offboarding__empty {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.employee-offboarding__error {
+  font-size: 13px;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border: 1px solid #FCA5A5;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.employee-offboarding__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.employee-offboarding__state-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.employee-offboarding__state-badge--in-progress {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.employee-offboarding__state-badge--completed {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.employee-offboarding__progress-section {
+  margin-bottom: 14px;
+}
+
+.employee-offboarding__progress-bar-track {
+  height: 8px;
+  border-radius: 20px;
+  background: var(--color-surface-muted);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.employee-offboarding__progress-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: var(--color-primary);
+  transition: width 0.2s ease;
+}
+
+.employee-offboarding__progress {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.employee-offboarding__completed-banner {
+  font-size: 12.5px;
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0 0 14px;
+}
+
+.employee-offboarding__asset-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  color: #B45309;
+  background: var(--color-warning-soft);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0 0 14px;
+}
+
+.employee-offboarding__task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.employee-offboarding__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.employee-offboarding__task--done {
+  background: var(--color-success-soft);
+  border-color: transparent;
+}
+
+.employee-offboarding__task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.employee-offboarding__task-name--done {
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+.employee-offboarding__requirement-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.employee-offboarding__requirement-badge--required {
+  background: var(--color-warning-soft);
+  color: #B45309;
+}
+
+.employee-offboarding__requirement-badge--optional {
+  background: #FFFFFF;
+  color: var(--color-text-secondary);
+}
+
+.employee-offboarding__task-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.employee-offboarding__completed-on {
+  font-size: 11.5px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.employee-offboarding__not-completed {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.employee-offboarding__completed-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .employee-offboarding__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .employee-offboarding__start-button {
+    justify-content: center;
+  }
+}
+
+.employee-offboarding__last-working-date {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.employee-offboarding__complete-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.employee-offboarding__complete-hint {
+  font-size: 12.5px;
+  color: var(--color-warning);
+  margin: 0;
+}
+
+.employee-offboarding__complete-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-danger);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.employee-offboarding__complete-button:hover:not(:disabled) {
+  background: #B91C1C;
+}
+
+.employee-offboarding__complete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.employee-offboarding__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.employee-offboarding__cancel {
+  padding: 9px 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.employee-offboarding__cancel:hover {
+  background: var(--color-surface-muted);
+  border-color: #D1D5DB;
+}
+
+.employee-offboarding__submit {
+  padding: 9px 16px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.employee-offboarding__submit:hover {
+  background: var(--color-primary-dark);
+}
+
+.employee-offboarding__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

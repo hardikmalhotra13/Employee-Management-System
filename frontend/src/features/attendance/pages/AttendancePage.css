@@ -1,0 +1,489 @@
+.attendance-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.attendance-page .page-header__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.attendance-page__add-button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Filters */
+
+.attendance-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.attendance-page__filters > * {
+  min-width: 170px;
+  flex: 1 1 170px;
+  margin-bottom: 0;
+}
+
+.attendance-page__filters input,
+.attendance-page__filters select {
+  height: 40px;
+}
+
+.attendance-page__filter-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.attendance-page__filter-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.attendance-page__select {
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.attendance-page__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+/* Summary strip - derived from fetched entries, no new API */
+
+.attendance-page__summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.attendance-page__summary-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.attendance-page__summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.attendance-page__summary-icon--present {
+  background: var(--color-success-soft);
+  color: #157F45;
+}
+
+.attendance-page__summary-icon--absent {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.attendance-page__summary-icon--late {
+  background: var(--color-warning-soft);
+  color: #B45309;
+}
+
+.attendance-page__summary-icon--half-day {
+  background: #F3ECFC;
+  color: #6D28D9;
+}
+
+.attendance-page__summary-value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.attendance-page__summary-label {
+  margin: 1px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.attendance-page__summary-meta {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Error banner */
+
+.attendance-page__error {
+  font-size: 13px;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border: 1px solid #FCA5A5;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0;
+}
+
+/* Table card */
+
+.attendance-page__table-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.attendance-page__table-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.attendance-page__table-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.attendance-page__table-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__table-card-subtitle {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+}
+
+/* Cells */
+
+.attendance-page__employee-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.attendance-page__employee-name {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__employee-code {
+  font-size: 11.5px;
+  color: var(--color-text-secondary);
+}
+
+/* Row action */
+
+.attendance-page__action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.attendance-page__action-button--edit {
+  color: var(--color-primary);
+}
+
+.attendance-page__action-button--edit:hover {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+/* Status badges */
+
+.attendance-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.attendance-status-badge--present {
+  background: var(--color-success-soft);
+  color: #157F45;
+}
+
+.attendance-status-badge--late {
+  background: var(--color-warning-soft);
+  color: #B45309;
+}
+
+.attendance-status-badge--absent {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.attendance-status-badge--half-day {
+  background: #F3ECFC;
+  color: #6D28D9;
+}
+
+.attendance-status-badge--on-leave {
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}
+
+/* Modal form */
+
+.attendance-page__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.attendance-page__form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.attendance-page__form-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.attendance-page__form-section-title {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__form-section-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.attendance-page__readonly-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.attendance-page__readonly-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.attendance-page__readonly-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__readonly-label--spaced {
+  margin-top: 6px;
+}
+
+.attendance-page__half-day-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.attendance-page__half-day-toggle input {
+  cursor: pointer;
+}
+
+.attendance-page__textarea-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.attendance-page__textarea-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.attendance-page__required {
+  color: var(--color-danger);
+  margin-left: 2px;
+}
+
+.attendance-page__textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.15s ease;
+}
+
+.attendance-page__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+.attendance-page__form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.attendance-page__form-error {
+  font-size: 12.5px;
+  color: var(--color-danger);
+  margin: -4px 0 12px;
+}
+
+.attendance-page__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.attendance-page__cancel {
+  padding: 9px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.attendance-page__cancel:hover {
+  background: var(--color-surface-muted);
+  border-color: #B9C2CE;
+}
+
+.attendance-page__submit {
+  padding: 9px 16px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.attendance-page__submit:hover {
+  background: var(--color-primary-dark);
+}
+
+@media (max-width: 1024px) {
+  .attendance-page__summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .attendance-page {
+    gap: 14px;
+  }
+
+  .attendance-page__filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .attendance-page__summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attendance-page__form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

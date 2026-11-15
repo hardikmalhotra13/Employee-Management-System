@@ -1,0 +1,233 @@
+.employee-settings-page {
+  padding-bottom: 24px;
+}
+
+.employee-settings__card {
+  background: #FFFFFF;
+  border: 1px solid #DCE1E8;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.05),
+    0 4px 12px rgba(16, 24, 40, 0.06);
+  margin-top: 20px;
+}
+
+.employee-settings__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.employee-settings__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #EFF6FF;
+  color: #2563EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.employee-settings__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.employee-settings__loading {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.employee-settings__error {
+  font-size: 13px;
+  color: #DC2626;
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.employee-settings__success {
+  font-size: 13px;
+  color: #15803D;
+  background: #F0FDF4;
+  border: 1px solid #86EFAC;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 4px 0 0;
+}
+
+.employee-settings__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-top: 1px solid #EEF0F3;
+}
+
+.employee-settings__row:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.employee-settings__row--form {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.employee-settings__row-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.employee-settings__row-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.employee-settings__row-subtitle {
+  font-size: 12.5px;
+  color: #6B7280;
+  margin: 4px 0 0;
+}
+
+.employee-settings__status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.employee-settings__status-badge--on {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.employee-settings__status-badge--off {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+.employee-settings__action-button {
+  padding: 9px 16px;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.employee-settings__action-button:hover {
+  background: #F9FAFB;
+  border-color: #9CA3AF;
+}
+
+.employee-settings__password-form {
+  max-width: 360px;
+}
+
+.employee-settings__modal-copy {
+  font-size: 13px;
+  color: #374151;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.employee-settings__qr-code {
+  display: block;
+  margin: 0 auto 14px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+}
+
+.employee-settings__manual-key {
+  text-align: center;
+  font-size: 12.5px;
+  color: #6B7280;
+  margin: 0 0 18px;
+}
+
+.employee-settings__manual-key code {
+  background: #F3F4F6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.employee-settings__link-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #2563EB;
+  cursor: pointer;
+  margin: 4px 0 18px;
+  padding: 0;
+}
+
+.employee-settings__link-button:hover {
+  text-decoration: underline;
+}
+
+.employee-settings__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.employee-settings__cancel {
+  padding: 9px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.employee-settings__cancel:hover {
+  background: #F9FAFB;
+  border-color: #D1D5DB;
+}
+
+.employee-settings__save {
+  padding: 9px 16px;
+  background: #2563EB;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.employee-settings__save:hover {
+  background: #1D4ED8;
+}

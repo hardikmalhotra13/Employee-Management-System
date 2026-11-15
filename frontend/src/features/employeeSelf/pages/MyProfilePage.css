@@ -1,0 +1,334 @@
+.my-profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.my-profile-page__state {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.my-profile-page__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 20px;
+}
+
+.my-profile-page__avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.my-profile-page__avatar {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft-strong);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-profile-page__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-profile-page__avatar-initials {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.my-profile-page__avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: 2px solid var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.my-profile-page__avatar-edit:hover {
+  background: var(--color-primary-dark);
+}
+
+.my-profile-page__avatar-edit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.my-profile-page__avatar-remove {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-pill);
+  background: var(--color-danger);
+  color: #FFFFFF;
+  border: 2px solid var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.my-profile-page__avatar-remove:hover {
+  background: #B91C1C;
+}
+
+.my-profile-page__avatar-remove:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.my-profile-page__file-input {
+  display: none;
+}
+
+.my-profile-page__identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-profile-page__name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.my-profile-page__name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.my-profile-page__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  margin: 4px 0 0;
+}
+
+.my-profile-page__meta-dot {
+  color: var(--color-text-muted);
+}
+
+.my-profile-page__photo-error {
+  font-size: 11.5px;
+  color: var(--color-danger);
+  margin: 8px 0 0;
+}
+
+.my-profile-page__edit-button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 34px;
+  padding: 0 16px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.my-profile-page__edit-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.my-profile-page__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.my-profile-page__card {
+  min-width: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 20px;
+}
+
+.my-profile-page__card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.my-profile-page__card-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-profile-page__card-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 2px;
+}
+
+.my-profile-page__card-subtitle {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.my-profile-page__field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.my-profile-page__field-grid--employment {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.my-profile-page__field {
+  min-width: 0;
+}
+
+.my-profile-page__field--full {
+  grid-column: 1 / -1;
+}
+
+.my-profile-page__editable-field label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.my-profile-page__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 5px;
+}
+
+.my-profile-page__value {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.my-profile-page__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.my-profile-page__cancel {
+  padding: 9px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.my-profile-page__cancel:hover {
+  background: var(--color-surface-muted);
+}
+
+.my-profile-page__cancel:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.my-profile-page__save {
+  padding: 9px 16px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.my-profile-page__save:hover {
+  background: var(--color-primary-dark);
+}
+
+.my-profile-page__save:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .my-profile-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-profile-page__field-grid--employment {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .my-profile-page__header {
+    flex-wrap: wrap;
+  }
+
+  .my-profile-page__edit-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .my-profile-page__field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-profile-page__field-grid--employment {
+    grid-template-columns: 1fr;
+  }
+}

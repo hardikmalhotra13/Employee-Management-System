@@ -1,0 +1,312 @@
+.grade-list-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grade-list-page .page-header__title {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.grade-list-page__add-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.grade-list-page__add-button:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Controls row */
+
+.grade-list-page__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.grade-list-page__archived-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  width: fit-content;
+  user-select: none;
+}
+
+.grade-list-page__switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 34px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  background: #D1D5DB;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.grade-list-page__switch--on {
+  background: var(--color-primary);
+}
+
+.grade-list-page__switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(17, 24, 39, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.grade-list-page__switch--on .grade-list-page__switch-knob {
+  transform: translateX(14px);
+}
+
+.grade-list-page__switch:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Table card */
+
+.grade-list-page__table-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.grade-list-page__table-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.grade-list-page__table-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.grade-list-page__table-card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.grade-list-page__table-card-subtitle {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+}
+
+.grade-list-page__table-card-footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+/* Cells */
+
+.grade-list-page__code-cell {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.grade-list-page__name-cell {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.grade-list-page__archived-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  font-weight: 600;
+  background: var(--color-surface-muted);
+  color: var(--color-text-secondary);
+}
+
+.grade-list-page__archived-placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Row actions menu */
+
+.grade-list-page__menu {
+  position: relative;
+  display: inline-block;
+}
+
+.grade-list-page__menu-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.grade-list-page__menu-trigger:hover {
+  background: var(--color-surface-muted);
+  border-color: #B9C2CE;
+  color: var(--color-text-primary);
+}
+
+.grade-list-page__menu-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 20;
+  min-width: 190px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.grade-list-page__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.grade-list-page__menu-item:hover {
+  background: var(--color-surface-muted);
+}
+
+.grade-list-page__menu-item--danger {
+  color: var(--color-danger);
+}
+
+.grade-list-page__menu-item--danger:hover {
+  background: var(--color-danger-soft);
+}
+
+/* Error banner */
+
+.grade-list-page__delete-error {
+  font-size: 13px;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border: 1px solid #FCA5A5;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0;
+}
+
+/* Modal form */
+
+.grade-list-page__code {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 16px;
+}
+
+.grade-list-page__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.grade-list-page__cancel {
+  padding: 9px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.grade-list-page__cancel:hover {
+  background: var(--color-surface-muted);
+  border-color: #B9C2CE;
+}
+
+.grade-list-page__submit {
+  padding: 9px 16px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.grade-list-page__submit:hover {
+  background: var(--color-primary-dark);
+}
+
+@media (max-width: 640px) {
+  .grade-list-page {
+    gap: 14px;
+  }
+
+  .grade-list-page__controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

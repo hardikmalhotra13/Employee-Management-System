@@ -1,0 +1,43 @@
+.employee-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.employee-shell__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.employee-shell__page {
+  flex: 1;
+  min-height: 0;
+  padding: 24px;
+  background: var(--color-surface-muted);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.employee-shell__backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .employee-shell__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.4);
+    z-index: 30;
+  }
+}
+
+@media (min-width: 769px) {
+  .employee-shell__page {
+    padding: 28px 32px;
+  }
+}

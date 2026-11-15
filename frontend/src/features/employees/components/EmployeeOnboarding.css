@@ -1,0 +1,198 @@
+.employee-onboarding {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.employee-onboarding__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.employee-onboarding__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.employee-onboarding__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.employee-onboarding__title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.employee-onboarding__subtitle {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+  margin: 2px 0 0;
+}
+
+.employee-onboarding__start-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.employee-onboarding__start-button:hover {
+  background: var(--color-primary-dark);
+}
+
+.employee-onboarding__loading,
+.employee-onboarding__empty {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.employee-onboarding__error {
+  font-size: 13px;
+  color: var(--color-danger);
+  background: var(--color-danger-soft);
+  border: 1px solid #FCA5A5;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.employee-onboarding__progress {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  margin: 0 0 14px;
+}
+
+.employee-onboarding__task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.employee-onboarding__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.employee-onboarding__task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.employee-onboarding__task-name--done {
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+}
+
+.employee-onboarding__required-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+.employee-onboarding__completed-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .employee-onboarding__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .employee-onboarding__start-button {
+    justify-content: center;
+  }
+}
+
+.employee-onboarding__complete-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.employee-onboarding__complete-hint {
+  font-size: 12.5px;
+  color: var(--color-warning);
+  margin: 0;
+}
+
+.employee-onboarding__complete-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.employee-onboarding__complete-button:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.employee-onboarding__complete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,49 @@
+.attendance-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.attendance-status-badge--present {
+  background: #ECFDF5;
+  color: #047857;
+}
+
+.attendance-status-badge--late {
+  background: #FFFBEB;
+  color: #B45309;
+}
+
+.attendance-status-badge--absent {
+  background: #FEF2F2;
+  color: #DC2626;
+}
+
+.attendance-status-badge--half-day {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.attendance-status-badge--on-leave {
+  background: var(--color-primary-soft);
+  color: var(--color-primary-dark);
+}
+
+.attendance-status-badge--not-checked-in {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+.attendance-status-badge--weekend {
+  background: #EEF0F4;
+  color: #4B5563;
+}
+
+.attendance-status-badge--holiday {
+  background: #EDE9FE;
+  color: #6D28D9;
+}

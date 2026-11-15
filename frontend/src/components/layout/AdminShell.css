@@ -1,0 +1,22 @@
+.admin-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.admin-shell__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.admin-shell__page {
+  flex: 1;
+  min-height: 0;
+  padding: 28px 32px;
+  background: var(--color-surface-muted);
+  overflow-y: auto;
+}
