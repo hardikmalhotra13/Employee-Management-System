@@ -7,7 +7,7 @@
 -- accounts) afterwards with backend/scripts/provision_accounts.py - see
 -- "Database Setup" in the README.
 
-USE EMPLOYEE_MS;
+USE employee_ms;
 
 -- ------------------------------------------------------
 -- Admin roles (system roles - fixed for now, more can be added later

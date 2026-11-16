@@ -36,3 +36,6 @@ htmlcov/
 # Build and temporary files
 *.tmp
 *.bak
+
+# Aiven SSL certificates
+backend/certs/

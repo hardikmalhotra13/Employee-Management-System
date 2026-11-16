@@ -1,8 +1,7 @@
 -- Employee Management System (EMS) - Version 1.0
 -- Database schema generated from the approved Software Design Specification
 
-CREATE DATABASE IF NOT EXISTS EMPLOYEE_MS;
-USE EMPLOYEE_MS;
+USE employee_ms;
 
 -- ------------------------------------------------------
 -- admin_roles
